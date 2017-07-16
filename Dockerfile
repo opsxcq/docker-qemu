@@ -11,6 +11,7 @@ RUN apt-get update && \
     bridge-utils\
     libvirt-bin\
     libvirt-clients\
+    cpio \
     qemu\
     qemu-kvm\
     qemu-system\
