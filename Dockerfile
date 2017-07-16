@@ -13,7 +13,7 @@ RUN apt-get update && \
     libvirt-clients\
     cpio \
     qemu\
-    qemu-kvm\
+    #qemu-kvm\
     qemu-system\
     qemu-system-arm\
     qemu-system-x86\
