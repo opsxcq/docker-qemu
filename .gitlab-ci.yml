@@ -4,6 +4,7 @@ stages:
     - build
 
 build:
+    image: docker:latest
     stage: build
     script:
         - export IMAGE_TAG=$(echo -en $CI_BUILD_REF_NAME | tr -c '[:alnum:]_.-' '-' | sed 's/master/latest/g')
@@ -11,5 +12,3 @@ build:
         - docker build --pull -t "$CI_REGISTRY_IMAGE:$IMAGE_TAG" --build-arg http_proxy=http://10.1.1.9:3142/ .
         - docker push "$CI_REGISTRY_IMAGE:$IMAGE_TAG"
         - docker tag "$CI_REGISTRY_IMAGE:$IMAGE_TAG" "$PUBLIC_TAG"
-    tags:
-        - docker
