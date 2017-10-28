@@ -6,16 +6,16 @@ RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y \
     # Useful packages
     git curl wget vim \
-    # Needed packages
+    # Libvirt packages
     bridge-utils\
     libvirt-clients\
     cpio \
+    virtinst\
+    # Qemu packages
     qemu\
-    #qemu-kvm\
     qemu-system\
     qemu-system-arm\
     qemu-system-x86\
-    virtinst\
     && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
