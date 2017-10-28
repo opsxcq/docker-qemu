@@ -8,7 +8,6 @@ RUN apt-get update && \
     git curl wget vim \
     # Needed packages
     bridge-utils\
-    libvirt-bin\
     libvirt-clients\
     cpio \
     qemu\
